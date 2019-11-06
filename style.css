@@ -4,9 +4,23 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.contatore {
+  width: 15%;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
 table {
-  width: 100%;
-  height: 100vh;
+  width: 90%;
+  height: 90vh;
   border-spacing: 0;
 }
 
