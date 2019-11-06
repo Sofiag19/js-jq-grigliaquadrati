@@ -38,12 +38,12 @@ $(document).ready(function(){
     for (var j = 0; j < 8; j++) {
       k++;
       console.log(k);
-      var cella = document.getElementById("row"+[i]);
+      var riga = document.getElementById("row"+[i]);
+      riga.innerHTML += "<td></td>";
       if (tdRossi.includes(k)==true) {
-        // cella.className = "red";
-        $("row"+[i]).addClass("red");
+        riga.className = "red";
+        // $("row"+[i]).addClass("red");
       }
-      cella.innerHTML += "<td></td>";
     }
   }
   var contatoreRosso = [];
