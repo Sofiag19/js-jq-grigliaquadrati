@@ -8,6 +8,7 @@ $(document).ready(function(){
   var contatoreRosso = [];
   $(".red").click(function(){
     $(this).css("background-color","red");
+    $(this).off();
     var rosso = $(this).html();
     contatoreRosso.push(rosso);
     document.getElementById('red_score').innerHTML = contatoreRosso.length;
@@ -16,6 +17,7 @@ $(document).ready(function(){
   var contatoreVerde = [];
   $(".green").click(function(){
     $(this).css("background-color","green");
+    $(this).off();
     var verde = $(this).html();
     contatoreVerde.push(verde);
     document.getElementById('green_score').innerHTML = contatoreVerde.length;

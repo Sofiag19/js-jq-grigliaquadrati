@@ -1,0 +1,31 @@
+*{
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.contatore {
+  width: 30%;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  width: 90%;
+  height: 90vh;
+  border-spacing: 0;
+}
+
+td {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
