@@ -16,7 +16,7 @@ $(document).ready(function(){
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
+
   var tdRossi= [];
   var x = 0;
   var rosso;
@@ -37,9 +37,9 @@ $(document).ready(function(){
       k++;
       var riga = document.getElementById("row"+[i]);
       if (tdRossi.includes(k)) {
-        riga.innerHTML += "<td id=cella"+k+" class='red'></td>";
+        riga.innerHTML += "<td class='red'></td>";
       } else {
-        riga.innerHTML += "<td id=cella"+k+" class='green'></td>";
+        riga.innerHTML += "<td class='green'></td>";
       }
     }
   }
