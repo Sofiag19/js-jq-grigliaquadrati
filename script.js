@@ -8,17 +8,16 @@ $(document).ready(function(){
   var contatoreRosso = [];
   $(".red").click(function(){
     $(this).css("background-color","red");
-    // $(this).attr('on-click', 'disabled');
+    $(this).off();
     var rosso = $(this).html();
     contatoreRosso.push(rosso);
     document.getElementById('red_score').innerHTML = contatoreRosso.length;
-    console.log(contatoreRosso.length);
   });
 
   var contatoreVerde = [];
   $(".green").click(function(){
     $(this).css("background-color","green");
-    // $(this).attr('on-click', 'disabled');  
+    $(this).off();
     var verde = $(this).html();
     contatoreVerde.push(verde);
     document.getElementById('green_score').innerHTML = contatoreVerde.length;
