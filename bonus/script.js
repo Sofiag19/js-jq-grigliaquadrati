@@ -8,15 +8,44 @@
 // controllo sul click di un quadrato, se è stato già cliccato dò un feedback aggiuntivo, oltre il fatto che è colorato di già;
 // varie ed eventuali che vi possono venire in mente.
 
-for (var i = 0; i < 8; i++) {
-  document.getElementById('tabella').innerHTML += "<tr id=row"+ [i] +"></tr>";
-  for (var j = 0; j < 8; j++) {
-    document.getElementById("row"+[i]).innerHTML += "<td></td>";    
-  }
-}
+
+
 
 $(document).ready(function(){
 
+  // crazione numeri random per successivo paragone
+  function numRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  var tdRossi= [];
+  var x = 0;
+  var rosso;
+  while (tdRossi.length<15) {
+    rosso = numRandom(1,64);
+    if (tdRossi.includes(rosso)==false) {
+      tdRossi.push(rosso);
+    }
+    x++;
+  }
+  console.log(tdRossi);
+
+  // creazione tabella con associato numero per identificazione
+  var k = 0;
+  for (var i = 0; i < 8; i++) {
+    document.getElementById('tabella').innerHTML += "<tr id=row"+ [i] +"></tr>";
+    for (var j = 0; j < 8; j++) {
+      k++;
+      console.log(k);
+      var cella = document.getElementById("row"+[i]);
+      if (tdRossi.includes(k)==true) {
+        // cella.className = "red";
+        $("row"+[i]).addClass("red");
+      }
+      cella.innerHTML += "<td></td>";
+    }
+  }
   var contatoreRosso = [];
   $(".red").click(function(){
     $(this).css("background-color","red");
