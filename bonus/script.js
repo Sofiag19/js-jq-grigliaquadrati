@@ -37,14 +37,11 @@ $(document).ready(function(){
     document.getElementById('tabella').innerHTML += "<tr id=row"+ [i] +"></tr>";
     for (var j = 0; j < 8; j++) {
       k++;
-      console.log(k);
       var riga = document.getElementById("row"+[i]);
-      riga.innerHTML += "<td id='cella"+k+"'></td>";
-      // if (tdRossi.includes(k)==true) {
-        // riga.className = "red";
-        // $("row"+[i]).children(td).addClass(".red");
-        // $("row"+[i]).addClass("red");
-      // }
+      riga.innerHTML += "<td id=cella"+k+"></td>";
+      if (tdRossi.includes(k)) {
+
+      }
     }
   }
   var contatoreRosso = [];
