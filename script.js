@@ -5,10 +5,10 @@
 
 $(document).ready(function(){
   $(".red").click(function(){
-    $(this).css("background","red");
+    $(this).css("background-color","red");
   });
   $(".green").click(function(){
-    $(this).css("background","green");
+    $(this).css("background-color","green");
   });
 
 })
