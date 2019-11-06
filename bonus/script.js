@@ -8,9 +8,6 @@
 // controllo sul click di un quadrato, se è stato già cliccato dò un feedback aggiuntivo, oltre il fatto che è colorato di già;
 // varie ed eventuali che vi possono venire in mente.
 
-
-
-
 $(document).ready(function(){
 
   // crazione numeri random per successivo paragone
@@ -19,6 +16,7 @@ $(document).ready(function(){
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+  
   var tdRossi= [];
   var x = 0;
   var rosso;
@@ -38,12 +36,14 @@ $(document).ready(function(){
     for (var j = 0; j < 8; j++) {
       k++;
       var riga = document.getElementById("row"+[i]);
-      riga.innerHTML += "<td id=cella"+k+"></td>";
       if (tdRossi.includes(k)) {
-        $("td").addClass("red");
+        riga.innerHTML += "<td id=cella"+k+" class='red'></td>";
+      } else {
+        riga.innerHTML += "<td id=cella"+k+" class='green'></td>";
       }
     }
   }
+
   var contatoreRosso = [];
   $(".red").click(function(){
     $(this).css("background-color","red");
