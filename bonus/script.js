@@ -39,11 +39,12 @@ $(document).ready(function(){
       k++;
       console.log(k);
       var riga = document.getElementById("row"+[i]);
-      riga.innerHTML += "<td></td>";
-      if (tdRossi.includes(k)==true) {
-        riga.className = "red";
+      riga.innerHTML += "<td id='cella"+k+"'></td>";
+      // if (tdRossi.includes(k)==true) {
+        // riga.className = "red";
+        // $("row"+[i]).children(td).addClass(".red");
         // $("row"+[i]).addClass("red");
-      }
+      // }
     }
   }
   var contatoreRosso = [];
