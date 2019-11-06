@@ -40,7 +40,7 @@ $(document).ready(function(){
       var riga = document.getElementById("row"+[i]);
       riga.innerHTML += "<td id=cella"+k+"></td>";
       if (tdRossi.includes(k)) {
-
+        $("td").addClass("red");
       }
     }
   }
