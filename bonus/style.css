@@ -26,6 +26,6 @@ table {
 
 td {
   border: 1px solid black;
-  width: 20px;
-  height: 20px;
+  width: calc(100% / 8);
+  height: calc(90vh / 8);
 }

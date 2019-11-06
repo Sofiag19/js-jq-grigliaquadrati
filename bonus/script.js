@@ -3,6 +3,12 @@
 // gli altri diventano verdi (tutti i rimanennti)
 // Opzionale: Sopra alla griglia deve esserci un contatore che conta quanti rossi e quanti verdi sono stati scoperti
 
+for (var i = 0; i < 8; i++) {
+  document.getElementById('tabella').innerHTML += "<tr id="+ [i] +"></tr>";
+  for (var j = 0; j < 8; j++) {
+    document.getElementById([i]).innerHTML += "<td></td>";    
+  }
+}
 $(document).ready(function(){
 
   var contatoreRosso = [];
